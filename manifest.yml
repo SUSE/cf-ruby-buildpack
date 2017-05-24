@@ -4,7 +4,7 @@ default_versions:
 - name: ruby
   version: 2.3.4
 - name: yarn
-  version: 0.22.0
+  version: 0.24.6
 url_to_dependency_map:
 - match: ruby-(.*?)-jruby-(.*?)\.tgz
   name: jruby
@@ -141,9 +141,9 @@ dependencies:
   cf_stacks:
   - cflinuxfs2
 - name: yarn
-  version: 0.22.0
-  uri: https:///dependencies/yarn/yarn-v0.22.0-bd0fa300.tar.gz
-  md5: bd0fa3000a488d89f75b03efcbd32cec
+  version: 0.24.6
+  uri: https:///dependencies/yarn/yarn-v0.24.6-156eb82f.tar.gz
+  md5: 156eb82fc7a7635bbc2738a9af936fc5
   cf_stacks:
   - cflinuxfs2
 exclude_files:
