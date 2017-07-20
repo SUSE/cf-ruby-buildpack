@@ -134,6 +134,12 @@ dependencies:
   md5: e6a45d6ed829ced730c2dcc8e68ca9e8
   cf_stacks:
   - cflinuxfs2
+- name: jruby
+  version: ruby-2.3.1-jruby-9.1.8.0
+  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/jruby/jruby-9.1.8.0_ruby-2.3.1-linux-x64-dbe2bcec.tgz
+  md5: dbe2bcec55ea12ba1bb4ee875e63a4b5
+  cf_stacks:
+  - opensuse42
 - name: node
   version: 6.10.2
   uri: https://buildpacks.cloudfoundry.org/dependencies/node/node-6.10.2-linux-x64-9f48b587.tgz
