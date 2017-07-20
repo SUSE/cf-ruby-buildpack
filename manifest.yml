@@ -81,6 +81,12 @@ dependencies:
   cf_stacks:
   - cflinuxfs2
 - name: ruby
+  version: 2.3.4
+  md5: e74ff4239346126941ba71abc999f853
+  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/ruby/ruby-2.3.4-linux-x64-e74ff423.tgz
+  cf_stacks:
+  - opensuse42
+- name: ruby
   version: 2.3.3
   md5: 636d81f2a095b4f59afb64127e923ea0
   uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby-2.3.3-linux-x64-636d81f2.tgz
