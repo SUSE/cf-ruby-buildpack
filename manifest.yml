@@ -56,6 +56,12 @@ dependencies:
   md5: d7236b1f16e658d45de69257a3a78d5c
   cf_stacks:
   - cflinuxfs2
+- name: bundler
+  version: 1.14.6
+  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/bundler/bundler-1.14.6-f1bcc04b.tgz
+  md5: f1bcc04bac6faffc81d3307534293398
+  cf_stacks:
+  - opensuse42
 - name: openjdk1.8-latest
   version: 1.8.0_121
   uri: https://java-buildpack.cloudfoundry.org/openjdk/trusty/x86_64/openjdk-1.8.0_121.tar.gz
