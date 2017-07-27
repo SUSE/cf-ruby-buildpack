@@ -160,10 +160,10 @@ dependencies:
   - opensuse42
 - name: node
   version: 4.8.2
-  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/node/node-4.8.2-linux-x64-9765f55f.tgz
-  md5: 9765f55fb13b00ceca41eabffaa77bdd
+  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/node/node-4.8.2-linux-x64-be83da03.tgz
+  md5: be83da03e164daf29c541e5f791fa4c4
   cf_stacks:
-  - cflinuxfs2
+  - opensuse42
 exclude_files:
 - ".git/"
 - ".gitignore"
