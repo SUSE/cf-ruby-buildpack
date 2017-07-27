@@ -152,18 +152,18 @@ dependencies:
   md5: 9f48b58738d33e263789c30f9d1a044b
   cf_stacks:
   - cflinuxfs2
-- name: node
-  version: 4.8.2
-  uri: https://buildpacks.cloudfoundry.org/dependencies/node/node-4.8.2-linux-x64-09d53abc.tgz
-  md5: 09d53abca4f08cf63b9eb88b7175266f
-  cf_stacks:
-  - cflinuxfs2
 - name: yarn
   version: 0.24.6
   uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/yarn/yarn-v0.24.6-156eb82f.tar.gz
   md5: 156eb82fc7a7635bbc2738a9af936fc5
   cf_stacks:
   - opensuse42
+- name: node
+  version: 4.8.2
+  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/node/node-4.8.2-linux-x64-9765f55f.tgz
+  md5: 9765f55fb13b00ceca41eabffaa77bdd
+  cf_stacks:
+  - cflinuxfs2
 exclude_files:
 - ".git/"
 - ".gitignore"
