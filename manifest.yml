@@ -153,15 +153,15 @@ dependencies:
   cf_stacks:
   - opensuse42
 - name: node
-  version: 4.8.2
-  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/node/node-4.8.2-linux-x64-be83da03.tgz
-  md5: be83da03e164daf29c541e5f791fa4c4
-  cf_stacks:
-  - opensuse42
-- name: node
   version: 6.10.2
   uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/node/node-6.10.2-linux-x64-ce1ba110.tgz
   md5: ce1ba110493814628fa7f071dd996992
+  cf_stacks:
+  - opensuse42
+- name: node
+  version: 4.8.3
+  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/node/node-4.8.3-linux-x64-465ababa.tgz
+  md5: 465ababa001368838e3b7c992df67710
   cf_stacks:
   - opensuse42
 exclude_files:
