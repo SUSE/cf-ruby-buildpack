@@ -155,36 +155,36 @@ dependencies:
 - name: ruby
   version: 2.4.1
   md5: 38370b4bd7214af6139d0989ae36018f
-  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/ruby/ruby-2.4.1-linux-x64-38370b4b.tgz
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.4.1-linux-x64-38370b4b.tgz
   cf_stacks:
   - opensuse42
 - name: jruby
   version: ruby-2.3.3-jruby-9.1.9.0
-  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/jruby/jruby-9.1.9.0_ruby-2.3.3-linux-x64-185b4850.tgz
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/jruby/jruby-9.1.9.0_ruby-2.3.3-linux-x64-185b4850.tgz
   md5: 185b485040e69c6903bd6d0a0cbf015d
   cf_stacks:
   - opensuse42
 - name: yarn
   version: 0.24.6
-  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/yarn/yarn-v0.24.6-156eb82f.tar.gz
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/yarn/yarn-v0.24.6-156eb82f.tar.gz
   md5: 156eb82fc7a7635bbc2738a9af936fc5
   cf_stacks:
   - opensuse42
 - name: node
   version: 6.10.2
-  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/node/node-6.10.2-linux-x64-ce1ba110.tgz
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/node/node-6.10.2-linux-x64-ce1ba110.tgz
   md5: ce1ba110493814628fa7f071dd996992
   cf_stacks:
   - opensuse42
 - name: node
   version: 4.8.3
-  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/node/node-4.8.3-linux-x64-465ababa.tgz
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/node/node-4.8.3-linux-x64-465ababa.tgz
   md5: 465ababa001368838e3b7c992df67710
   cf_stacks:
   - opensuse42
 - name: bundler
   version: 1.15.0
-  uri: https://minio.from-the.cloud:9000/cf-buildpacks/dependencies/bundler/bundler-1.15.0-3db83175.tgz
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/bundler/bundler-1.15.0-3db83175.tgz
   md5: 3db83175e85236bd403c51397669300f
   cf_stacks:
   - opensuse42
