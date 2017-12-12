@@ -9,7 +9,7 @@ import (
 	// _ "ruby/hooks"
 	"time"
 
-	"github.com/cloudfoundry/libbuildpack"
+	"github.com/SUSE/cf-libbuildpack"
 )
 
 func main() {

@@ -11,8 +11,8 @@ import (
 	"ruby/cache"
 	"ruby/supply"
 
-	"github.com/cloudfoundry/libbuildpack"
-	"github.com/cloudfoundry/libbuildpack/ansicleaner"
+	"github.com/SUSE/cf-libbuildpack"
+	"github.com/SUSE/cf-libbuildpack/ansicleaner"
 	gomock "github.com/golang/mock/gomock"
 	. "github.com/onsi/ginkgo"
 	// . "github.com/onsi/ginkgo/extensions/table"

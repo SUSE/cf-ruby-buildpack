@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/cloudfoundry/libbuildpack"
+	"github.com/SUSE/cf-libbuildpack"
 )
 
 type Metadata struct {

@@ -3,7 +3,7 @@
 
 [[constraint]]
   branch = "master"
-  name = "github.com/cloudfoundry/libbuildpack"
+  name = "github.com/SUSE/cf-libbuildpack"
 
 [[constraint]]
   name = "github.com/kr/text"
