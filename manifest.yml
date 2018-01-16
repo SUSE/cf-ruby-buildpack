@@ -302,7 +302,7 @@ dependencies:
   cf_stacks:
   - sle12
 - name: jruby
-  version: ruby-2.3.4-jruby-9.1.13.0
+  version: ruby-2.3.3-jruby-9.1.13.0
   uri: https://s3.amazonaws.com/cf-sle12/dependencies/jruby/jruby-9.1.13.0_ruby-2.3.4-linux-x64-e6f8cc24.tgz
   sha256: c4beefa0e5837a00b2d91e619e84f7dd7a8adbb26296750383c62c8c395de711
   cf_stacks:
