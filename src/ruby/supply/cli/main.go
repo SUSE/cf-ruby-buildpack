@@ -10,7 +10,7 @@ import (
 	"ruby/versions"
 	"time"
 
-	"github.com/SUSE/cf-libbuildpack"
+	"github.com/cloudfoundry/libbuildpack"
 )
 
 func main() {

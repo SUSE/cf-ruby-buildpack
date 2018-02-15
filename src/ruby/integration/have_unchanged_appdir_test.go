@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/SUSE/cf-libbuildpack/cutlass"
+	"github.com/cloudfoundry/libbuildpack/cutlass"
 	"github.com/onsi/gomega/format"
 	"github.com/onsi/gomega/types"
 )

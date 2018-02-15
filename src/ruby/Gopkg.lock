@@ -8,12 +8,6 @@
   version = "v1.4.0"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/SUSE/cf-libbuildpack"
-  packages = [".","ansicleaner","bratshelper","cutlass"]
-  revision = "e4d44a80ae8647db88d3a94619c97d99b0b1d454"
-
-[[projects]]
   name = "github.com/blang/semver"
   packages = ["."]
   revision = "2ee87856327ba09384cabd113bc6b5d174e9ec0f"
@@ -22,8 +16,14 @@
 [[projects]]
   branch = "master"
   name = "github.com/cloudfoundry/libbuildpack"
-  packages = [".","cutlass","packager"]
-  revision = "ae83d424c6fb889f055b0936fbdb212c07131aa8"
+  packages = [
+    ".",
+    "ansicleaner",
+    "bratshelper",
+    "cutlass",
+    "packager"
+  ]
+  revision = "96d9ae0a2c508421f9c692f4240954128367d16b"
 
 [[projects]]
   name = "github.com/elazarl/goproxy"
@@ -45,13 +45,47 @@
 [[projects]]
   branch = "master"
   name = "github.com/onsi/ginkgo"
-  packages = [".","config","internal/codelocation","internal/containernode","internal/failer","internal/leafnodes","internal/remote","internal/spec","internal/spec_iterator","internal/specrunner","internal/suite","internal/testingtproxy","internal/writer","reporters","reporters/stenographer","reporters/stenographer/support/go-colorable","reporters/stenographer/support/go-isatty","types"]
+  packages = [
+    ".",
+    "config",
+    "internal/codelocation",
+    "internal/containernode",
+    "internal/failer",
+    "internal/leafnodes",
+    "internal/remote",
+    "internal/spec",
+    "internal/spec_iterator",
+    "internal/specrunner",
+    "internal/suite",
+    "internal/testingtproxy",
+    "internal/writer",
+    "reporters",
+    "reporters/stenographer",
+    "reporters/stenographer/support/go-colorable",
+    "reporters/stenographer/support/go-isatty",
+    "types"
+  ]
   revision = "652e15c9a27e1cec563e065568014f29eecf6bd9"
 
 [[projects]]
   branch = "master"
   name = "github.com/onsi/gomega"
-  packages = [".","format","gbytes","gexec","internal/assertion","internal/asyncassertion","internal/oraclematcher","internal/testingtsupport","matchers","matchers/support/goraph/bipartitegraph","matchers/support/goraph/edge","matchers/support/goraph/node","matchers/support/goraph/util","types"]
+  packages = [
+    ".",
+    "format",
+    "gbytes",
+    "gexec",
+    "internal/assertion",
+    "internal/asyncassertion",
+    "internal/oraclematcher",
+    "internal/testingtsupport",
+    "matchers",
+    "matchers/support/goraph/bipartitegraph",
+    "matchers/support/goraph/edge",
+    "matchers/support/goraph/node",
+    "matchers/support/goraph/util",
+    "types"
+  ]
   revision = "1eecca0ba8e6f5ea5a431ce21d3aee2af0b4c90b"
 
 [[projects]]
@@ -69,13 +103,21 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
-  packages = ["bcrypt","blowfish"]
+  packages = [
+    "bcrypt",
+    "blowfish"
+  ]
   revision = "9f005a07e0d31d45e6656d241bb5c0f2efd4bc94"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/net"
-  packages = ["context","html","html/atom","html/charset"]
+  packages = [
+    "context",
+    "html",
+    "html/atom",
+    "html/charset"
+  ]
   revision = "9dfe39835686865bff950a07b394c12a98ddc811"
 
 [[projects]]
@@ -87,7 +129,25 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/text"
-  packages = ["encoding","encoding/charmap","encoding/htmlindex","encoding/internal","encoding/internal/identifier","encoding/japanese","encoding/korean","encoding/simplifiedchinese","encoding/traditionalchinese","encoding/unicode","internal/gen","internal/tag","internal/utf8internal","language","runes","transform","unicode/cldr"]
+  packages = [
+    "encoding",
+    "encoding/charmap",
+    "encoding/htmlindex",
+    "encoding/internal",
+    "encoding/internal/identifier",
+    "encoding/japanese",
+    "encoding/korean",
+    "encoding/simplifiedchinese",
+    "encoding/traditionalchinese",
+    "encoding/unicode",
+    "internal/gen",
+    "internal/tag",
+    "internal/utf8internal",
+    "language",
+    "runes",
+    "transform",
+    "unicode/cldr"
+  ]
   revision = "88f656faf3f37f690df1a32515b479415e1a6769"
 
 [[projects]]
@@ -99,6 +159,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "ed70e756ad00ac21200e820ada82c095f7ce32516908377d5eff5e7a8b3dfd94"
+  inputs-digest = "1da705ffa418c5e52b3d0875939dda9ec915838762a424f6c7b86632b71c6d4f"
   solver-name = "gps-cdcl"
   solver-version = 1

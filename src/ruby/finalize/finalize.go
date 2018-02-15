@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/SUSE/cf-libbuildpack"
+	"github.com/cloudfoundry/libbuildpack"
 	"github.com/kr/text"
 )
 
