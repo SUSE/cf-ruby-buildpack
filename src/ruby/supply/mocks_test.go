@@ -5,7 +5,7 @@
 package supply_test
 
 import (
-	libbuildpack "github.com/SUSE/cf-libbuildpack"
+	libbuildpack "github.com/cloudfoundry/libbuildpack"
 	gomock "github.com/golang/mock/gomock"
 	io "io"
 	exec "os/exec"

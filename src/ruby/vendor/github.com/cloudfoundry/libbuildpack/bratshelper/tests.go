@@ -10,11 +10,9 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"sort"
 	"strings"
 	"time"
 
-	"github.com/Masterminds/semver"
 	"github.com/cloudfoundry/libbuildpack"
 	"github.com/cloudfoundry/libbuildpack/cutlass"
 	. "github.com/onsi/ginkgo"
@@ -49,7 +47,9 @@ func UnbuiltBuildpack(depName string, copyBrats func(string) *cutlass.App) {
 			PushApp(app)
 			Expect(app.Stdout.String()).To(ContainSubstring("-----> Download go "))
 
-			Expect(app.Stdout.String()).To(ContainSubstring("Installing " + depName))
+			if depName != "" {
+				Expect(app.Stdout.String()).To(ContainSubstring("Installing " + depName))
+			}
 			Expect(app.GetBody("/")).To(ContainSubstring("Hello World!"))
 		})
 	})
@@ -140,22 +140,15 @@ func StagingWithBuildpackThatSetsEOL(depName string, copyBrats func(string) *cut
 	})
 }
 
-func StagingWithADepThatIsNotTheLatest(depName string, copyBrats func(string) *cutlass.App) {
+func StagingWithADepThatIsNotTheLatestConstrained(depName string, versionConstraint string, copyBrats func(string) *cutlass.App) {
 	Describe("staging with a version of "+depName+" that is not the latest patch release in the manifest", func() {
 		var app *cutlass.App
 		BeforeEach(func() {
 			manifest, err := libbuildpack.NewManifest(Data.BpDir, nil, time.Now())
 			Expect(err).ToNot(HaveOccurred())
-			raw := manifest.AllDependencyVersions(depName)
-			vs := make([]*semver.Version, len(raw))
-			for i, r := range raw {
-				vs[i], err = semver.NewVersion(r)
-				Expect(err).ToNot(HaveOccurred())
-			}
-			sort.Sort(semver.Collection(vs))
-			version := vs[0].Original()
-
-			app = copyBrats(version)
+			versions, err := libbuildpack.FindMatchingVersions(versionConstraint, manifest.AllDependencyVersions(depName))
+			Expect(err).ToNot(HaveOccurred())
+			app = copyBrats(versions[0])
 			app.Buildpacks = []string{Data.Cached}
 			PushApp(app)
 		})
@@ -167,6 +160,10 @@ func StagingWithADepThatIsNotTheLatest(depName string, copyBrats func(string) *c
 			Expect(app.Stdout.String()).To(MatchRegexp("WARNING.*A newer version of " + depName + " is available in this buildpack"))
 		})
 	})
+}
+
+func StagingWithADepThatIsNotTheLatest(depName string, copyBrats func(string) *cutlass.App) {
+	StagingWithADepThatIsNotTheLatestConstrained(depName, "x", copyBrats)
 }
 
 func StagingWithCustomBuildpackWithCredentialsInDependencies(depRegexp string, copyBrats func(string) *cutlass.App) {
@@ -225,11 +222,16 @@ func DeployAppWithExecutableProfileScript(depName string, copyBrats func(string)
 	Describe("deploying an app that has an executable .profile script", func() {
 		var app *cutlass.App
 		BeforeEach(func() {
-			manifest, err := libbuildpack.NewManifest(Data.BpDir, nil, time.Now())
-			dep, err := manifest.DefaultVersion(depName)
-			Expect(err).ToNot(HaveOccurred())
+			if depName != "" {
+				manifest, err := libbuildpack.NewManifest(Data.BpDir, nil, time.Now())
+				Expect(err).ToNot(HaveOccurred())
+				dep, err := manifest.DefaultVersion(depName)
+				Expect(err).ToNot(HaveOccurred())
 
-			app = copyBrats(dep.Version)
+				app = copyBrats(dep.Version)
+			} else {
+				app = copyBrats("")
+			}
 			AddDotProfileScriptToApp(app.Path)
 			app.Buildpacks = []string{Data.Cached}
 			PushApp(app)
@@ -313,6 +315,41 @@ func ForAllSupportedVersions(depName string, copyBrats func(string) *cutlass.App
 
 				runTests(version, app)
 			})
+		}
+	})
+}
+
+func ForAllSupportedVersions2(depName1, depName2 string, compatible func(string, string) bool, itString string, copyBrats func(string, string) *cutlass.App, runTests func(string, string, *cutlass.App)) {
+	Describe("For all supported "+depName1+" and "+depName2+" versions", func() {
+		bpDir, err := cutlass.FindRoot()
+		if err != nil {
+			panic(err)
+		}
+		manifest, err := libbuildpack.NewManifest(bpDir, nil, time.Now())
+		if err != nil {
+			panic(err)
+		}
+		versions1 := manifest.AllDependencyVersions(depName1)
+		versions2 := manifest.AllDependencyVersions(depName2)
+
+		var app *cutlass.App
+		AfterEach(func() {
+			defaultCleanup(app)
+		})
+
+		for _, v1 := range versions1 {
+			version1 := v1
+			for _, v2 := range versions2 {
+				version2 := v2
+				if compatible(v1, v2) {
+					It(fmt.Sprintf(itString, version1, version2), func() {
+						app = copyBrats(version1, version2)
+						app.Buildpacks = []string{Data.Cached}
+
+						runTests(version1, version2, app)
+					})
+				}
+			}
 		}
 	})
 }

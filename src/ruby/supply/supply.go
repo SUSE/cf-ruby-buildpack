@@ -13,7 +13,7 @@ import (
 	"ruby/cache"
 	"strings"
 
-	"github.com/SUSE/cf-libbuildpack"
+	"github.com/cloudfoundry/libbuildpack"
 	"github.com/kr/text"
 )
 

@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/SUSE/cf-libbuildpack"
+	"github.com/cloudfoundry/libbuildpack"
 )
 
 type Manifest interface {
