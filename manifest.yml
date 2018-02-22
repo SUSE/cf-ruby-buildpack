@@ -290,7 +290,7 @@ dependencies:
 - name: yarn
   version: 1.3.2
   uri: https://cf-opensusefs2.s3.amazonaws.com/dependencies/yarn/yarn-v1.3.2-db82fa09.tar.gz
-  md5: db82fa09c996e9318f2f1d2ab99228f9
+  sha256: 6cfe82e530ef0837212f13e45c1565ba53f5199eec2527b85ecbcd88bf26821d
   cf_stacks:
   - opensuse42
 include_files:
