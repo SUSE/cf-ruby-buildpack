@@ -2,7 +2,9 @@
 language: ruby
 default_versions:
 - name: ruby
-  version: 2.4.x
+  version: 2.4.2
+- name: yarn
+  version: 1.6.0
 pre_package: scripts/build.sh
 url_to_dependency_map: []
 dependency_deprecation_dates:
@@ -109,6 +111,186 @@ dependencies:
   sha256: a57b2fdb2bfeeb083d45a883bc29af94d5e83a21c25f3fc001c295938e988509
   cf_stacks:
   - cflinuxfs2
+- cf_stacks:
+  - opensuse42
+  name: openjdk1.8-latest
+  sha256: 12fec885a7560cafc4e3622ba465a17b75557d619210b50c31be2d71f2e389ea
+  uri: https://s3.amazonaws.com/suse-cf-java-buildpack/openjdk-jdk/trusty/x86_64/openjdk-1.8.0_152.tar.gz
+  version: 1.8.0
+- cf_stacks:
+  - opensuse42
+  name: rubygems
+  sha256: 67f714a582a9ce471bbbcb417374ea9cf9c061271c865dbb0d093f3bc3371eeb
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/rubygems/rubygems-2.7.6-67f714a5.tgz
+  version: 2.7.6
+- name: jruby
+  version: ruby-2.3.3-jruby-9.1.17.0
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/jruby/jruby-9.1.17.0_ruby-2.3.4-linux-x64-2ef85a39.tgz
+  sha256: 2ef85a39dd30224da4a7166e37b116b98b71ef11be139b1a47d3f292c2e1d943
+  cf_stacks:
+  - opensuse42
+- name: node
+  version: 4.9.1
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/node/node-4.9.1-linux-x64-c741d43a.tgz
+  sha256: c741d43a49af510628ff4432b0ba72222482141f57af0f9863b663a7597d2aa0
+  cf_stacks:
+  - opensuse42
+- name: node
+  version: 6.14.2
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/node/node-6.14.2-linux-x64-3572f2ed.tgz
+  sha256: 3572f2ed67cf6d251641e8a0115ae82e441bfa197b2500f2b0bad1106ba89838
+  cf_stacks:
+  - opensuse42
+- name: bundler
+  version: 1.16.1
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/bundler/bundler-1.16.1-3aa95ed9.tgz
+  sha256: 3aa95ed952628c3ee56fe85f190eeb4bd37e575ac3a1ece643026d5bb0822c35
+  cf_stacks:
+  - opensuse42
+- name: ruby
+  version: 2.5.0
+  sha256: 11211a874de9b7e0b9b548304c93d54636adc81dcdb15f758ec639c69fbd5027
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.5.0-linux-x64-11211a87.tgz
+  cf_stacks:
+  - opensuse42
+- name: ruby
+  version: 2.5.1
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.5.1-linux-x64-4bcd5069.tgz
+  sha256: 4bcd5069c46d305d5486005b368e7f6c277078e9e619274ec95f4e1913aeb281
+  cf_stacks:
+  - opensuse42
+- name: ruby
+  version: 2.4.4
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.4.4-linux-x64-e4757e1c.tgz
+  sha256: e4757e1c3938b6d7942261bc9f90cccbac8ec2c5206cbc1951f5f9fd86911126
+  cf_stacks:
+  - opensuse42
+- name: ruby
+  version: 2.4.3
+  sha256: 094d00dd9ebf71f70786c79ce4896b5c7ea2e5d22806a8401b54248147f7e94d
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.4.3-linux-x64-094d00dd.tgz
+  cf_stacks:
+  - opensuse42
+- name: ruby
+  version: 2.3.6
+  sha256: a58e17e1f1a419dc84fa75f0a714940c756bdaa69f8ca3dbc2961c978fbda722
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.3.6-linux-x64-a58e17e1.tgz
+  cf_stacks:
+  - opensuse42
+- name: ruby
+  version: 2.3.7
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.3.7-linux-x64-57179419.tgz
+  sha256: 5717941988e5f98342aeec14dc46ed76d71e8b8b7075529bb0f12d2eb54ddaad
+  cf_stacks:
+  - opensuse42
+- name: ruby
+  version: 2.2.9
+  sha256: 5a4d604f9e8310ba9b0733dc6d8a7a93d043f8082e9bd9ee0e08c7782177544c
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.2.9-linux-x64-5a4d604f.tgz
+  cf_stacks:
+  - opensuse42
+- name: ruby
+  version: 2.2.10
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.2.10-linux-x64-a69bcdf8.tgz
+  sha256: a69bcdf8e1674ebdc96748903cb50c92969ed1246194bb5eb9833485b4d86eb0
+  cf_stacks:
+  - opensuse42
+- cf_stacks:
+  - sle12
+  name: openjdk1.8-latest
+  sha256: 12fec885a7560cafc4e3622ba465a17b75557d619210b50c31be2d71f2e389ea
+  uri: https://s3.amazonaws.com/suse-cf-java-buildpack/openjdk-jdk/trusty/x86_64/openjdk-1.8.0_152.tar.gz
+  version: 1.8.0
+- cf_stacks:
+  - sle12
+  name: rubygems
+  sha256: 67f714a582a9ce471bbbcb417374ea9cf9c061271c865dbb0d093f3bc3371eeb
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/rubygems/rubygems-2.7.6-67f714a5.tgz
+  version: 2.7.6
+- name: yarn
+  version: 1.6.0
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/yarn/yarn-v1.6.0-a57b2fdb.tar.gz
+  sha256: a57b2fdb2bfeeb083d45a883bc29af94d5e83a21c25f3fc001c295938e988509
+  cf_stacks:
+  - sle12
+- name: node
+  version: 4.9.1
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/node/node-4.9.1-linux-x64-d8cf09c7.tgz
+  sha256: d8cf09c70b6c7b42007ffe065adb49d72ec0cdb7b23589811251ba1791b0bd71
+  cf_stacks:
+  - sle12
+- name: node
+  version: 6.14.2
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/node/node-6.14.2-linux-x64-40bf8e1e.tgz
+  sha256: 40bf8e1edcb577b971d2c1c6c5395c5bfb6385cd420e5627595b7f9e8d8eae50
+  cf_stacks:
+  - sle12
+- name: ruby
+  version: 2.5.0
+  sha256: d138f9b05a861ad7fa38fdbfdaeddfc79e81aa8018cb7f66ed5258524a95e818
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.5.0-linux-x64-d138f9b0.tgz
+  cf_stacks:
+  - sle12
+- name: ruby
+  version: 2.5.1
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.5.1-linux-x64-61e69df6.tgz
+  sha256: 61e69df6f5938fedef767510c6fa6522b6153c0c95a4daf15bcd378de79c34c8
+  cf_stacks:
+  - sle12
+- name: ruby
+  version: 2.4.4
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.4.4-linux-x64-5462b000.tgz
+  sha256: 5462b000a82c912400b510d64986985d63a0792cd951b9f2215e022ac44f1d7a
+  cf_stacks:
+  - sle12
+- name: ruby
+  version: 2.4.3
+  sha256: d314bd46ff1640c36f16c2f78f08de45f0c2263673c2fdcd3c5181dd8814849d
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.4.3-linux-x64-d314bd46.tgz
+  cf_stacks:
+  - sle12
+- name: ruby
+  version: 2.3.6
+  sha256: 1a5f414b24a3a159aed93c5e185da482f9f15c03d2cc1dc240381a971b467e8b
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.3.6-linux-x64-1a5f414b.tgz
+  cf_stacks:
+  - sle12
+- name: ruby
+  version: 2.3.7
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.3.7-linux-x64-90448246.tgz
+  sha256: 904482463ed160be2a6f87ecc59b89ab148ade853910d835e86a0df216bf20c5
+  cf_stacks:
+  - sle12
+- name: ruby
+  version: 2.2.9
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.2.9-linux-x64-641f6bea.tgz
+  sha256: 641f6bea0d3522d0baa48a717233e367e6c024cacfc95ea4ec14bf9df6ed60c9
+  cf_stacks:
+  - sle12
+- name: ruby
+  version: 2.2.10
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.2.10-linux-x64-18c54462.tgz
+  sha256: 18c544625fba5054845b20c3fb48c0817813a0224027ea66b9efc94ed04dc4cb
+  cf_stacks:
+  - sle12
+- name: bundler
+  version: 1.16.1
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/bundler/bundler-1.16.1-ce1ab27e.tgz
+  sha256: ce1ab27e91f3e613525fcb864d42debc91c2f332b7a7d47d4b922047a66721bd
+  cf_stacks:
+  - sle12
+- name: jruby
+  version: ruby-2.3.3-jruby-9.1.17.0
+  uri: https://s3.amazonaws.com/cf-sle12/dependencies/jruby/jruby-9.1.17.0_ruby-2.3.4-linux-x64-61b0cf34.tgz
+  sha256: 61b0cf349d92fb8d7f34bb2f5f6acad936c8a23e57873ee0e0d8477c330bbfa4
+  cf_stacks:
+  - sle12
+- name: yarn
+  version: 1.6.0
+  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/yarn/yarn-v1.6.0-a57b2fdb.tar.gz
+  sha256: a57b2fdb2bfeeb083d45a883bc29af94d5e83a21c25f3fc001c295938e988509
+  cf_stacks:
+  - opensuse42
 include_files:
 - CHANGELOG
 - CONTRIBUTING.md
