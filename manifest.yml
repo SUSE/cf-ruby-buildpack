@@ -2,7 +2,7 @@
 language: ruby
 default_versions:
 - name: ruby
-  version: 2.4.2
+  version: 2.4.4
 - name: yarn
   version: 1.6.0
 pre_package: scripts/build.sh
