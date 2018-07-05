@@ -198,91 +198,91 @@ dependencies:
 - cf_stacks:
   - sle12
   name: openjdk1.8-latest
-  sha256: 12fec885a7560cafc4e3622ba465a17b75557d619210b50c31be2d71f2e389ea
-  uri: https://s3.amazonaws.com/suse-cf-java-buildpack/openjdk-jdk/trusty/x86_64/openjdk-1.8.0_152.tar.gz
+  sha256: 4627e9d4915569a82f76f00496d3cf4877140f828780657edf0dc8fbfc234ac7
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/openjdk-8.172b11.tar.gz
   version: 1.8.0
 - cf_stacks:
   - sle12
   name: rubygems
   sha256: 67f714a582a9ce471bbbcb417374ea9cf9c061271c865dbb0d093f3bc3371eeb
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/rubygems/rubygems-2.7.6-67f714a5.tgz
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/rubygems-2.7.6.tgz
   version: 2.7.6
 - name: yarn
   version: 1.6.0
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/yarn/yarn-v1.6.0-a57b2fdb.tar.gz
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/yarn-v1.6.0.tar.gz
   sha256: a57b2fdb2bfeeb083d45a883bc29af94d5e83a21c25f3fc001c295938e988509
   cf_stacks:
   - sle12
 - name: node
   version: 4.9.1
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/node/node-4.9.1-linux-x64-d8cf09c7.tgz
-  sha256: d8cf09c70b6c7b42007ffe065adb49d72ec0cdb7b23589811251ba1791b0bd71
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/node-4.9.1-4.9.1.tgz
+  sha256: 32f44001ef610fa968d788de3b8cddc8e6f7586092e2f6eb46cdfd307d23ebf1
   cf_stacks:
   - sle12
 - name: node
   version: 6.14.2
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/node/node-6.14.2-linux-x64-40bf8e1e.tgz
-  sha256: 40bf8e1edcb577b971d2c1c6c5395c5bfb6385cd420e5627595b7f9e8d8eae50
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/node-6.14.2-6.14.2.tgz
+  sha256: 0fc9d919d118d212449739a824ddd55347390e9a7a036b45c8f5fb5d9da2a648
   cf_stacks:
   - sle12
 - name: ruby
   version: 2.5.0
-  sha256: d138f9b05a861ad7fa38fdbfdaeddfc79e81aa8018cb7f66ed5258524a95e818
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.5.0-linux-x64-d138f9b0.tgz
+  sha256: fd56ecf7b0aa0e04ec6aa0266087a6e60208a7f528d0d069bfd1dbfd9df4ad74
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/ruby-2.5.0.tgz
   cf_stacks:
   - sle12
 - name: ruby
   version: 2.5.1
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.5.1-linux-x64-61e69df6.tgz
-  sha256: 61e69df6f5938fedef767510c6fa6522b6153c0c95a4daf15bcd378de79c34c8
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/ruby-2.5.1.tgz
+  sha256: f11f6a812ab07c6a3992d4ed2a805d4e103ddce26e39cda18fd989901775727c
   cf_stacks:
   - sle12
 - name: ruby
   version: 2.4.4
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.4.4-linux-x64-5462b000.tgz
-  sha256: 5462b000a82c912400b510d64986985d63a0792cd951b9f2215e022ac44f1d7a
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/ruby-2.4.4.tgz
+  sha256: 85cbeb3a6ee223edd774868b006a53b0ae055f673e15b64b1ae1cbd1c9bc2f0e
   cf_stacks:
   - sle12
 - name: ruby
   version: 2.4.3
-  sha256: d314bd46ff1640c36f16c2f78f08de45f0c2263673c2fdcd3c5181dd8814849d
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.4.3-linux-x64-d314bd46.tgz
+  sha256: 6b932c13313cfff95374818097497196dc77f4534284e67c4c70980d66773ee0
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/ruby-2.4.3.tgz
   cf_stacks:
   - sle12
 - name: ruby
   version: 2.3.6
-  sha256: 1a5f414b24a3a159aed93c5e185da482f9f15c03d2cc1dc240381a971b467e8b
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.3.6-linux-x64-1a5f414b.tgz
+  sha256: 6a30844e50e24952de1edf8ea3a6295ae314b0f9087ceb8d95c58e64e31901e4
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/ruby-2.3.6.tgz
   cf_stacks:
   - sle12
 - name: ruby
   version: 2.3.7
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.3.7-linux-x64-90448246.tgz
-  sha256: 904482463ed160be2a6f87ecc59b89ab148ade853910d835e86a0df216bf20c5
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/ruby-2.3.7.tgz
+  sha256: 263896cfbe017bc5045f12d5c226cbda41bb06d1b35f73692aa860a551aefca4
   cf_stacks:
   - sle12
 - name: ruby
   version: 2.2.9
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.2.9-linux-x64-641f6bea.tgz
-  sha256: 641f6bea0d3522d0baa48a717233e367e6c024cacfc95ea4ec14bf9df6ed60c9
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/ruby-2.2.9.tgz
+  sha256: a9bb0318ac59c9f0a3e7e37fa5ee7aaec50272f394856bac1ed9fd9a2aca5e59
   cf_stacks:
   - sle12
 - name: ruby
   version: 2.2.10
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/ruby/ruby-2.2.10-linux-x64-18c54462.tgz
-  sha256: 18c544625fba5054845b20c3fb48c0817813a0224027ea66b9efc94ed04dc4cb
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/ruby-2.2.10.tgz
+  sha256: ed37beeccf1521c73900dec94602f2cb447dcf18d2aa4e6fc3749d62c98fe549
   cf_stacks:
   - sle12
 - name: bundler
   version: 1.16.1
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/bundler/bundler-1.16.1-ce1ab27e.tgz
-  sha256: ce1ab27e91f3e613525fcb864d42debc91c2f332b7a7d47d4b922047a66721bd
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/bundler-1.16.1.tgz
+  sha256: 254035cdfe284f1d4b26b5a677a098e1c428d986cd23c2f8efc56271bbe2f60e
   cf_stacks:
   - sle12
 - name: jruby
   version: ruby-2.3.3-jruby-9.1.17.0
-  uri: https://s3.amazonaws.com/cf-sle12/dependencies/jruby/jruby-9.1.17.0_ruby-2.3.4-linux-x64-61b0cf34.tgz
-  sha256: 61b0cf349d92fb8d7f34bb2f5f6acad936c8a23e57873ee0e0d8477c330bbfa4
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/jruby-9.1.17.0_ruby2.3.3.tgz
+  sha256: e7329e2b182691d1908556cfb1e67dcd2350bf95d694f1420db122c72e52bb19
   cf_stacks:
   - sle12
 - name: yarn
