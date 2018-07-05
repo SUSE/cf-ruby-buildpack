@@ -215,14 +215,14 @@ dependencies:
   - sle12
 - name: node
   version: 4.9.1
-  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/node-4.9.1-4.9.1.tgz
-  sha256: 32f44001ef610fa968d788de3b8cddc8e6f7586092e2f6eb46cdfd307d23ebf1
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/node-4.9.1.tgz
+  sha256: 30462f5195bfeafb0ac0d53266551ffcac6b1afc65ec3fcd3a1a224643071a05
   cf_stacks:
   - sle12
 - name: node
   version: 6.14.2
-  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/node-6.14.2-6.14.2.tgz
-  sha256: 0fc9d919d118d212449739a824ddd55347390e9a7a036b45c8f5fb5d9da2a648
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/node-6.14.2.tgz
+  sha256: 20ae1b6f8b832a297cd0349446dfcb69482891c93ac378485cce3e0e8b1e4e6d
   cf_stacks:
   - sle12
 - name: ruby
