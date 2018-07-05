@@ -114,85 +114,85 @@ dependencies:
 - cf_stacks:
   - opensuse42
   name: openjdk1.8-latest
-  sha256: 12fec885a7560cafc4e3622ba465a17b75557d619210b50c31be2d71f2e389ea
-  uri: https://s3.amazonaws.com/suse-cf-java-buildpack/openjdk-jdk/trusty/x86_64/openjdk-1.8.0_152.tar.gz
+  sha256: 69c16dd4030dba5535665b393f43a2912c0c928252530c0b3553a9267b17cbd9
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/openjdk-8.172b11.tar.gz
   version: 1.8.0
 - cf_stacks:
   - opensuse42
   name: rubygems
   sha256: 67f714a582a9ce471bbbcb417374ea9cf9c061271c865dbb0d093f3bc3371eeb
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/rubygems/rubygems-2.7.6-67f714a5.tgz
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/rubygems-2.7.6.tgz
   version: 2.7.6
 - name: jruby
   version: ruby-2.3.3-jruby-9.1.17.0
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/jruby/jruby-9.1.17.0_ruby-2.3.4-linux-x64-2ef85a39.tgz
-  sha256: 2ef85a39dd30224da4a7166e37b116b98b71ef11be139b1a47d3f292c2e1d943
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/jruby-9.1.17.0_ruby2.3.3.tgz
+  sha256: 7dfa864eb319365bdaefd6681a7ffa6214d5678c388397341fccd14238a6b283
   cf_stacks:
   - opensuse42
 - name: node
   version: 4.9.1
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/node/node-4.9.1-linux-x64-c741d43a.tgz
-  sha256: c741d43a49af510628ff4432b0ba72222482141f57af0f9863b663a7597d2aa0
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/node-4.9.1.tgz
+  sha256: 6047d189ed8a2f424e6b40aec8e211aea8bc1c216bddcc001a8903db0e6c9b3f
   cf_stacks:
   - opensuse42
 - name: node
   version: 6.14.2
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/node/node-6.14.2-linux-x64-3572f2ed.tgz
-  sha256: 3572f2ed67cf6d251641e8a0115ae82e441bfa197b2500f2b0bad1106ba89838
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/node-6.14.2.tgz
+  sha256: 4394a593abd11f7414149f6b957550c4f50aa6704b52e2cc32245433fbfded04
   cf_stacks:
   - opensuse42
 - name: bundler
   version: 1.16.1
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/bundler/bundler-1.16.1-3aa95ed9.tgz
-  sha256: 3aa95ed952628c3ee56fe85f190eeb4bd37e575ac3a1ece643026d5bb0822c35
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/bundler-1.16.1.tgz
+  sha256: b41667a7dc9270d52ce380c4edf4f4e216e51b9bf29bf8c002373edba9d3dd49
   cf_stacks:
   - opensuse42
 - name: ruby
   version: 2.5.0
-  sha256: 11211a874de9b7e0b9b548304c93d54636adc81dcdb15f758ec639c69fbd5027
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.5.0-linux-x64-11211a87.tgz
+  sha256: 67904cf7fe0564ead2c57f38ba71cb106fdf62500745250f718aa75e2b025c27
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/ruby-2.5.0.tgz
   cf_stacks:
   - opensuse42
 - name: ruby
   version: 2.5.1
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.5.1-linux-x64-4bcd5069.tgz
-  sha256: 4bcd5069c46d305d5486005b368e7f6c277078e9e619274ec95f4e1913aeb281
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/ruby-2.5.1.tgz
+  sha256: c18ccd82ac7801ca0094867ad2ec5a15215b257e0681846ce1c753a1224ba4ad
   cf_stacks:
   - opensuse42
 - name: ruby
   version: 2.4.4
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.4.4-linux-x64-e4757e1c.tgz
-  sha256: e4757e1c3938b6d7942261bc9f90cccbac8ec2c5206cbc1951f5f9fd86911126
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/ruby-2.4.4.tgz
+  sha256: 10b36cd25857be611a6d5f64566328770db8fa83dc9ec04b16eec2a591732b63
   cf_stacks:
   - opensuse42
 - name: ruby
   version: 2.4.3
-  sha256: 094d00dd9ebf71f70786c79ce4896b5c7ea2e5d22806a8401b54248147f7e94d
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.4.3-linux-x64-094d00dd.tgz
+  sha256: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/ruby-2.4.3.tgz
+  uri: e4698a3d14b44305fe921733cee5365a4d79a3c2582cf8ed341321f6cbf836a8
   cf_stacks:
   - opensuse42
 - name: ruby
   version: 2.3.6
-  sha256: a58e17e1f1a419dc84fa75f0a714940c756bdaa69f8ca3dbc2961c978fbda722
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.3.6-linux-x64-a58e17e1.tgz
+  sha256: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/ruby-2.3.6.tgz
+  uri: a6eea6ff0371ae684cca5815ab8278d27472b28f8ee36cd01a085e72c590a43a
   cf_stacks:
   - opensuse42
 - name: ruby
   version: 2.3.7
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.3.7-linux-x64-57179419.tgz
-  sha256: 5717941988e5f98342aeec14dc46ed76d71e8b8b7075529bb0f12d2eb54ddaad
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/ruby-2.3.7.tgz
+  sha256: 5d320a46654bb4ce6237493f2cb9e3a3091d6c30f4a29901b769309badbfec49
   cf_stacks:
   - opensuse42
 - name: ruby
   version: 2.2.9
-  sha256: 5a4d604f9e8310ba9b0733dc6d8a7a93d043f8082e9bd9ee0e08c7782177544c
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.2.9-linux-x64-5a4d604f.tgz
+  sha256: 12fec885a7560cafc4e3622ba465a17b75557d619210b50c31be2d71f2e389ea
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/ruby-2.2.9.tgz
   cf_stacks:
   - opensuse42
 - name: ruby
   version: 2.2.10
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/ruby/ruby-2.2.10-linux-x64-a69bcdf8.tgz
-  sha256: a69bcdf8e1674ebdc96748903cb50c92969ed1246194bb5eb9833485b4d86eb0
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/ruby-2.2.10.tgz
+  sha256: 38cca5ec7e65e74a505ea965b3478272c1ceee1cf1ed3b26e6590e7da9af3b7e
   cf_stacks:
   - opensuse42
 - cf_stacks:
@@ -287,7 +287,7 @@ dependencies:
   - sle12
 - name: yarn
   version: 1.6.0
-  uri: https://s3.amazonaws.com/cf-opensusefs2/dependencies/yarn/yarn-v1.6.0-a57b2fdb.tar.gz
+  uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/yarn-v1.6.0.tar.gz
   sha256: a57b2fdb2bfeeb083d45a883bc29af94d5e83a21c25f3fc001c295938e988509
   cf_stacks:
   - opensuse42
