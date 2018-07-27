@@ -118,7 +118,7 @@ dependencies:
 - name: openjdk1.8-latest
   version: 1.8.0
   uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/openjdk-8.172b11.tar.gz
-  sha256: 69c16dd4030dba5535665b393f43a2912c0c928252530c0b3553a9267b17cbd9
+  sha256: 5d4ca6aaf791caf369d962fe898f897c0d956f9810503229cccd83914e35af99
   cf_stacks:
   - opensuse42
 - name: rubygems
@@ -136,7 +136,7 @@ dependencies:
 - name: jruby
   version: ruby-2.3.3-jruby-9.1.17.0
   uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/jruby-9.1.17.0_ruby2.3.3.tgz
-  sha256: 7dfa864eb319365bdaefd6681a7ffa6214d5678c388397341fccd14238a6b283
+  sha256: 5c2b77ed64e66ccf49a13e6034ed9a8ddfc422e41f58d759c961d92e8ad3e3cc
   cf_stacks:
   - opensuse42
 - name: jruby
@@ -148,7 +148,7 @@ dependencies:
 - name: node
   version: 4.9.1
   uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/openSUSE_Leap_42.3/node-4.9.1.tgz
-  sha256: 6047d189ed8a2f424e6b40aec8e211aea8bc1c216bddcc001a8903db0e6c9b3f
+  sha256: 6702e5bd1beccf9b5fbfd54af25af0a7ab4b78044e1492bc732c4407743c0141
   cf_stacks:
   - opensuse42
 - name: node
@@ -214,7 +214,7 @@ dependencies:
 - name: openjdk1.8-latest
   version: 1.8.0
   uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/openjdk-8.172b11.tar.gz
-  sha256: 4627e9d4915569a82f76f00496d3cf4877140f828780657edf0dc8fbfc234ac7
+  sha256: 4345aeb5040411a2256f87f52864f9e084ecd7fb29c61d2f670d56744781bdd5
   cf_stacks:
   - sle12
 - name: rubygems
@@ -232,7 +232,7 @@ dependencies:
 - name: node
   version: 4.9.1
   uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/node-4.9.1.tgz
-  sha256: 30462f5195bfeafb0ac0d53266551ffcac6b1afc65ec3fcd3a1a224643071a05
+  sha256: 46f85348323e7e665746b3d272660094c93126aacc3550a04a4157f25761e5a8
   cf_stacks:
   - sle12
 - name: node
@@ -298,7 +298,7 @@ dependencies:
 - name: jruby
   version: ruby-2.3.3-jruby-9.1.17.0
   uri: https://download.opensuse.org/repositories/Cloud:/Platform:/buildpacks:/dependencies/SLE_12_SP3/jruby-9.1.17.0_ruby2.3.3.tgz
-  sha256: e7329e2b182691d1908556cfb1e67dcd2350bf95d694f1420db122c72e52bb19
+  sha256: d6e9c6c16987a7dcd3da6739247045cbff15186239d4886ec02b983aac206ef4
   cf_stacks:
   - sle12
 - name: jruby
