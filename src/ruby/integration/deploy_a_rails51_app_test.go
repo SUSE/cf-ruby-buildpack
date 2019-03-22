@@ -36,7 +36,7 @@ var _ = Describe("Rails 5.1 (Webpack/Yarn) App", func() {
 			command := exec.Command("cf", "ssh", app.Name, "-c", "/tmp/lifecycle/launcher /home/vcap/app 'rails about' ''")
 			session, err := gexec.Start(command, GinkgoWriter, GinkgoWriter)
 			Expect(err).ToNot(HaveOccurred())
-			Eventually(session, 10, 0.25).Should(gexec.Exit(0))
+			Eventually(session, 20, 0.25).Should(gexec.Exit(0))
 		})
 	})
 })
