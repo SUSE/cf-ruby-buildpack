@@ -1,136 +1,211 @@
----
-language: ruby
 default_versions:
 - name: ruby
   version: 2.7.x
-pre_package: scripts/build.sh
-url_to_dependency_map: []
-dependency_deprecation_dates:
-- version_line: 10.x
-  name: node
-  date: 2021-04-30
-  link: https://github.com/nodejs/LTS
-- version_line: 10.x.x
-  name: node
-  date: 2021-04-01
-  link: https://github.com/nodejs/Release
-- version_line: 2.7.x
-  name: ruby
-  date: 2023-04-01
-  link: https://www.ruby-lang.org/en/news/2020/03/31/ruby-2-7-1-released/
 dependencies:
-- name: bundler
-  version: 1.17.3
-  uri: https://buildpacks.cloudfoundry.org/dependencies/bundler/bundler-1.17.3-any-stack-b7502506.tgz
-  sha256: b7502506bb8ab5312d4efa208d39dca4a5830762ba6b4b094a72e9aa69702341
-  cf_stacks:
+- cf_stacks:
   - cflinuxfs3
+  name: bundler
+  sha256: b7502506bb8ab5312d4efa208d39dca4a5830762ba6b4b094a72e9aa69702341
   source: http://github.com/bundler/bundler/tree/v1.17.3
   source_sha256: a34cf18749cc92e25329fc11418bf7800853b74e1e39f82223841114d84d58de
-- name: bundler
-  version: 2.1.4
-  uri: https://buildpacks.cloudfoundry.org/dependencies/bundler/bundler-2.1.4-any-stack-df7bed89.tgz
-  sha256: df7bed898d3de06ddeee32f1df71a25a86e653587c13245dfd0b0e006098be79
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/bundler/bundler-1.17.3-any-stack-b7502506.tgz
+  version: 1.17.3
+- cf_stacks:
   - cflinuxfs3
+  name: bundler
+  sha256: df7bed898d3de06ddeee32f1df71a25a86e653587c13245dfd0b0e006098be79
   source: https://github.com/bundler/bundler/tree/v2.1.4
   source_sha256: 50014d21d6712079da4d6464de12bb93c278f87c9200d0b60ba99f32c25af489
-- name: jruby
-  version: 9.1.17.0
-  uri: https://buildpacks.cloudfoundry.org/dependencies/jruby/jruby_9.1.17.0-ruby-2.3_linux_x64_cflinuxfs3_31e7e929.tgz
-  sha256: 31e7e9299938f0f089239ea06e7a73608c3230061b908e02afb5c8965dea30bc
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/bundler/bundler-2.1.4-any-stack-df7bed89.tgz
+  version: 2.1.4
+- cf_stacks:
   - cflinuxfs3
+  name: jruby
+  sha256: 31e7e9299938f0f089239ea06e7a73608c3230061b908e02afb5c8965dea30bc
   source: https://s3.amazonaws.com/jruby.org/downloads/9.1.17.0/jruby-src-9.1.17.0.tar.gz
   source_sha256: b66d7c14f85075afdabb5ebf5950804c5a5d5c1d05ab833f580f04ee709b5773
-- name: jruby
-  version: 9.2.13.0
-  uri: https://buildpacks.cloudfoundry.org/dependencies/jruby/jruby_9.2.13.0-ruby-2.5_linux_x64_cflinuxfs3_6d672f74.tgz
-  sha256: 6d672f7471973da7812725257f770d2ac3ebb728221f3a4c5244a03cb184d61c
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/jruby/jruby_9.1.17.0-ruby-2.3_linux_x64_cflinuxfs3_31e7e929.tgz
+  version: 9.1.17.0
+- cf_stacks:
   - cflinuxfs3
+  name: jruby
+  sha256: 6d672f7471973da7812725257f770d2ac3ebb728221f3a4c5244a03cb184d61c
   source: https://s3.amazonaws.com/jruby.org/downloads/9.2.13.0/jruby-src-9.2.13.0.tar.gz
   source_sha256: d717ab81157906732a622e361f376cc33d57f18403d3839864dab317b8a3cbaf
-- name: node
-  version: 10.22.0
-  uri: https://buildpacks.cloudfoundry.org/dependencies/node/node_10.22.0_linux_x64_cflinuxfs3_43616969.tgz
-  sha256: 43616969dd39d52c9d3c0a4ed5e66600133356877ab8344a916638e7f5794490
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/jruby/jruby_9.2.13.0-ruby-2.5_linux_x64_cflinuxfs3_6d672f74.tgz
+  version: 9.2.13.0
+- cf_stacks:
   - cflinuxfs3
+  name: node
+  sha256: 43616969dd39d52c9d3c0a4ed5e66600133356877ab8344a916638e7f5794490
   source: https://nodejs.org/dist/v10.22.0/node-v10.22.0.tar.gz
   source_sha256: 8a77f883a9cba5451cef547f737e590a32c9840a4ab421a048f2fadda799ba41
-- name: openjdk1.8-latest
-  version: 1.8.0
-  uri: https://java-buildpack.cloudfoundry.org/openjdk-jdk/trusty/x86_64/openjdk-jdk-1.8.0_212-trusty.tar.gz
-  sha256: '0749e51942641f369a9411ba27207fbf74b8836f1fb19a3d85cee55e13387a9c'
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/node/node_10.22.0_linux_x64_cflinuxfs3_43616969.tgz
+  version: 10.22.0
+- cf_stacks:
   - cflinuxfs3
+  - sle15
+  name: openjdk1.8-latest
+  sha256: 0749e51942641f369a9411ba27207fbf74b8836f1fb19a3d85cee55e13387a9c
   source: https://java-buildpack.cloudfoundry.org/openjdk-jdk/trusty/x86_64/openjdk-jdk-1.8.0_212-trusty.tar.gz
-  source_sha256: '0749e51942641f369a9411ba27207fbf74b8836f1fb19a3d85cee55e13387a9c'
-- name: ruby
-  version: 2.5.7
-  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby_2.5.7_linux_x64_cflinuxfs3_8ee74636.tgz
-  sha256: 8ee7463635739d48ba823a2cda6bcef9914d04c0f6bd6c5fb00bcff5ed7c408e
-  cf_stacks:
+  source_sha256: 0749e51942641f369a9411ba27207fbf74b8836f1fb19a3d85cee55e13387a9c
+  uri: https://java-buildpack.cloudfoundry.org/openjdk-jdk/trusty/x86_64/openjdk-jdk-1.8.0_212-trusty.tar.gz
+  version: 1.8.0
+- cf_stacks:
   - cflinuxfs3
+  name: ruby
+  sha256: 8ee7463635739d48ba823a2cda6bcef9914d04c0f6bd6c5fb00bcff5ed7c408e
   source: https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.tar.gz
   source_sha256: 0b2d0d5e3451b6ab454f81b1bfca007407c0548dea403f1eba2e429da4add6d4
-- name: ruby
-  version: 2.5.8
-  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby_2.5.8_linux_x64_cflinuxfs3_3dba0259.tgz
-  sha256: 3dba0259334a540f87fb8322a67550acbf5aa974e0f21dc47d6b71fb76edb3de
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby_2.5.7_linux_x64_cflinuxfs3_8ee74636.tgz
+  version: 2.5.7
+- cf_stacks:
   - cflinuxfs3
+  name: ruby
+  sha256: 3dba0259334a540f87fb8322a67550acbf5aa974e0f21dc47d6b71fb76edb3de
   source: https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.8.tar.gz
   source_sha256: 6c0bdf07876c69811a9e7dc237c43d40b1cb6369f68e0e17953d7279b524ad9a
-- name: ruby
-  version: 2.6.5
-  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby-2.6.5-linux-x64-cflinuxfs3-a23c26ec.tgz
-  sha256: a23c26ec93e34ca05328390107ff40034b5103afb91194ebf70f66f0c0866db4
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby_2.5.8_linux_x64_cflinuxfs3_3dba0259.tgz
+  version: 2.5.8
+- cf_stacks:
   - cflinuxfs3
+  name: ruby
+  sha256: a23c26ec93e34ca05328390107ff40034b5103afb91194ebf70f66f0c0866db4
   source: https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.gz
   source_sha256: 66976b716ecc1fd34f9b7c3c2b07bbd37631815377a2e3e85a5b194cfdcbed7d
-- name: ruby
-  version: 2.6.6
-  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby_2.6.6_linux_x64_cflinuxfs3_9f860a65.tgz
-  sha256: 9f860a6520bf8774fcb06ea9a33ae17818875b747b58ca11b0690223c7126493
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby-2.6.5-linux-x64-cflinuxfs3-a23c26ec.tgz
+  version: 2.6.5
+- cf_stacks:
   - cflinuxfs3
+  name: ruby
+  sha256: 9f860a6520bf8774fcb06ea9a33ae17818875b747b58ca11b0690223c7126493
   source: https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.6.tar.gz
   source_sha256: 364b143def360bac1b74eb56ed60b1a0dca6439b00157ae11ff77d5cd2e92291
-- name: ruby
-  version: 2.7.0
-  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby-2.7.0-linux-x64-cflinuxfs3-68cd2bae.tgz
-  sha256: 68cd2baeb33c1f10a873aab8e492d4547f3b13d1a6302930ac25bcedf45d51ce
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby_2.6.6_linux_x64_cflinuxfs3_9f860a65.tgz
+  version: 2.6.6
+- cf_stacks:
   - cflinuxfs3
+  name: ruby
+  sha256: 68cd2baeb33c1f10a873aab8e492d4547f3b13d1a6302930ac25bcedf45d51ce
   source: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.0.tar.gz
   source_sha256: 8c99aa93b5e2f1bc8437d1bbbefd27b13e7694025331f77245d0c068ef1f8cbe
-- name: ruby
-  version: 2.7.1
-  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby_2.7.1_linux_x64_cflinuxfs3_e2562008.tgz
-  sha256: e25620088c536685f81aaae0f7f03c2143aa3dc9078a99707168915e85568f04
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby-2.7.0-linux-x64-cflinuxfs3-68cd2bae.tgz
+  version: 2.7.0
+- cf_stacks:
   - cflinuxfs3
+  name: ruby
+  sha256: e25620088c536685f81aaae0f7f03c2143aa3dc9078a99707168915e85568f04
   source: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.1.tar.gz
   source_sha256: d418483bdd0000576c1370571121a6eb24582116db0b7bb2005e90e250eae418
-- name: rubygems
-  version: 3.1.4
-  uri: https://buildpacks.cloudfoundry.org/dependencies/rubygems/rubygems_3.1.4_linux_noarch_any-stack_b59c5e57.tgz
-  sha256: b59c5e57bb79c93aca25ced44bd6f7ed044f9c7f358f9e5d7584d8b2c1d7f281
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby_2.7.1_linux_x64_cflinuxfs3_e2562008.tgz
+  version: 2.7.1
+- cf_stacks:
   - cflinuxfs3
+  name: rubygems
+  sha256: b59c5e57bb79c93aca25ced44bd6f7ed044f9c7f358f9e5d7584d8b2c1d7f281
   source: https://rubygems.org/rubygems/rubygems-3.1.4.tgz
   source_sha256: d8030019d86d60469d3f4f48b7cfcd724b184157ac2881a5bec4394d9cd93f7d
-- name: yarn
-  version: 1.22.5
-  uri: https://buildpacks.cloudfoundry.org/dependencies/yarn/yarn_1.22.5_linux_noarch_any-stack_c574fd17.tgz
-  sha256: c574fd17369fb206b6c29ce91faa08561f2d08d5ab12845515808fd8f00246fa
-  cf_stacks:
+  uri: https://buildpacks.cloudfoundry.org/dependencies/rubygems/rubygems_3.1.4_linux_noarch_any-stack_b59c5e57.tgz
+  version: 3.1.4
+- cf_stacks:
   - cflinuxfs3
+  name: yarn
+  sha256: c574fd17369fb206b6c29ce91faa08561f2d08d5ab12845515808fd8f00246fa
   source: https://github.com/yarnpkg/yarn/releases/download/v1.22.5/yarn-v1.22.5.tar.gz
   source_sha256: c664fb4692e4dfea750a37a533780834b40198c00cef4bbc5e8c14abab2ac141
+  uri: https://buildpacks.cloudfoundry.org/dependencies/yarn/yarn_1.22.5_linux_noarch_any-stack_c574fd17.tgz
+  version: 1.22.5
+- cf_stacks:
+  - sle15
+  name: bundler
+  sha256: b802f072400cde92df93154c63c7028d3342ba8192928afb0183c6edd5565a30
+  uri: https://cf-buildpacks.suse.com/dependencies/bundler/bundler-1.17.3-sle15-b802f072.tgz
+  version: 1.17.3
+- cf_stacks:
+  - sle15
+  name: bundler
+  sha256: 36e9fb952c51ebf66d1333e9c5530574b3215a2c02bdd0ef18067c7f502d776f
+  uri: https://cf-buildpacks.suse.com/dependencies/bundler/bundler-2.1.4-sle15-36e9fb95.tgz
+  version: 2.1.4
+- cf_stacks:
+  - sle15
+  name: jruby
+  sha256: 87317030c3f662e74e8fcf8d9d8111afd34b58fb057a5b711009186f70a39053
+  uri: https://cf-buildpacks.suse.com/dependencies/jruby/jruby-9.1.17.0_ruby2.3-linux-x64-sle15-87317030.tgz
+  version: 9.1.17.0
+- cf_stacks:
+  - sle15
+  name: jruby
+  sha256: c4f44400d35545abc459eded186f9e26d0d182cada0601cce20e25123967127a
+  uri: https://cf-buildpacks.suse.com/dependencies/jruby/jruby-9.2.13.0_ruby2.5-linux-x64-sle15-c4f44400.tgz
+  version: 9.2.13.0
+- cf_stacks:
+  - sle15
+  name: node
+  sha256: 8a2bfd001daf276275988a680885fc15edc9fb961e4c3404886d743a21d2a801
+  uri: https://cf-buildpacks.suse.com/dependencies/node/node-10.22.0-linux-x64-sle15-8a2bfd00.tgz
+  version: 10.22.0
+- cf_stacks:
+  - sle15
+  name: ruby
+  sha256: 74e823d8b90c32ff874c7057af735c0fb741895eea28f45e4845290f9c23f707
+  uri: https://cf-buildpacks.suse.com/dependencies/ruby/ruby-2.5.7-linux-x64-sle15-74e823d8.tgz
+  version: 2.5.7
+- cf_stacks:
+  - sle15
+  name: ruby
+  sha256: 653a7e20b94aa0f5da3f5556573426b84fb87cc7e8ff74b292f2b614bb969623
+  uri: https://cf-buildpacks.suse.com/dependencies/ruby/ruby-2.5.8-linux-x64-sle15-653a7e20.tgz
+  version: 2.5.8
+- cf_stacks:
+  - sle15
+  name: ruby
+  sha256: b75339c2d2a53757487a1868909702f02c666c63520dfa432b5762c7371004af
+  uri: https://cf-buildpacks.suse.com/dependencies/ruby/ruby-2.6.5-linux-x64-sle15-b75339c2.tgz
+  version: 2.6.5
+- cf_stacks:
+  - sle15
+  name: ruby
+  sha256: a2cc00520d0c86bb9dd6c8ea521b99dc71017ac506706e1189dcfc6124bb4bcd
+  uri: https://cf-buildpacks.suse.com/dependencies/ruby/ruby-2.6.6-linux-x64-sle15-a2cc0052.tgz
+  version: 2.6.6
+- cf_stacks:
+  - sle15
+  name: ruby
+  sha256: 8688b0f5c59541f4aedb95deb64f085cddb1ad3a3b7cb47c4f9e6b97bf7a3d16
+  uri: https://cf-buildpacks.suse.com/dependencies/ruby/ruby-2.7.0-linux-x64-sle15-8688b0f5.tgz
+  version: 2.7.0
+- cf_stacks:
+  - sle15
+  name: ruby
+  sha256: 6d5603f7d1b14c6241b19c14214b4b538187d70287ed821e97e2f9cb74bd57c2
+  uri: https://cf-buildpacks.suse.com/dependencies/ruby/ruby-2.7.1-linux-x64-sle15-6d5603f7.tgz
+  version: 2.7.1
+- cf_stacks:
+  - sle15
+  name: rubygems
+  sha256: 340428322ab3a1d31a214dff41a7b33d75885fc7f521a4b4572adfa0a17c5e84
+  uri: https://cf-buildpacks.suse.com/dependencies/rubygems/rubygems-3.1.4-34042832.tgz
+  version: 3.1.4
+- cf_stacks:
+  - sle15
+  name: yarn
+  sha256: 6d046795c28be7eed01cb5a93007c9c86507c4676963623a5dbc098c19f17a6a
+  uri: https://cf-buildpacks.suse.com/dependencies/yarn/yarn-1.22.5-6d046795.tar.gz
+  version: 1.22.5
+dependency_deprecation_dates:
+- date: "2021-04-30"
+  link: https://github.com/nodejs/LTS
+  name: node
+  version_line: 10.x
+- date: "2021-04-01"
+  link: https://github.com/nodejs/Release
+  name: node
+  version_line: 10.x.x
+- date: "2023-04-01"
+  link: https://www.ruby-lang.org/en/news/2020/03/31/ruby-2-7-1-released/
+  name: ruby
+  version_line: 2.7.x
 include_files:
 - CHANGELOG
 - CONTRIBUTING.md
@@ -146,3 +221,6 @@ include_files:
 - bin/release
 - bin/supply
 - manifest.yml
+language: ruby
+pre_package: scripts/build.sh
+url_to_dependency_map: []
